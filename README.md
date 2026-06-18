@@ -1,2 +1,3 @@
-# data-engineering-365
-Daily Python and SQL practice for continuous learning and skill development.
+# Data Engineering 365
+
+Code. Practice. Improve.
