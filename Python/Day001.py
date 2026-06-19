@@ -1,3 +1,5 @@
+# Day 1 - Python Basics
+
 # P1 - Print my name using a variable
 name = "Giri"
 print(name)
