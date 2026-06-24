@@ -34,3 +34,10 @@ rate = 5
 time = 2
 simple_interest = (principal * rate * time) / 100
 print("Simple Interest =", simple_interest)
+
+
+# Program 6 - Calculate the perimeter of a rectangle
+length = 10
+width = 5
+perimeter = 2 * (length + width)
+print("Perimeter =", perimeter)
