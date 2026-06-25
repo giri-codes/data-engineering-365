@@ -167,9 +167,8 @@ SELECT * FROM Orders
 ORDER BY order_id;
 
 
--- ============================================
 -- Verification Counts
--- ============================================
+
 
 SELECT COUNT(*) AS total_departments FROM Departments;
 
