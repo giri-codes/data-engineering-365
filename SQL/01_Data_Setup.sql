@@ -182,4 +182,4 @@ SELECT COUNT(*) AS total_customers FROM Customers;
 SELECT COUNT(*) AS total_orders FROM Orders;
 
 
--- CompanyDB v1.0 Setup Completed Successfully
+-- CompanyDB Setup Completed Successfully
