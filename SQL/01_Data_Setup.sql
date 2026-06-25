@@ -1,8 +1,10 @@
--- Day 02 - CompanyDB Data Setup
+-- Data Setup
 
--- Query 1: Insert departments
+-- Query 1 - Insert Departments
 
-INSERT INTO departments VALUES
+INSERT INTO Departments
+(department_id, department_name)
+VALUES
 (1, 'HR'),
 (2, 'Finance'),
 (3, 'Sales'),
@@ -10,9 +12,28 @@ INSERT INTO departments VALUES
 (5, 'Operations');
 
 
--- Query 2: Insert employees
+-- Query 2 - Verify Departments
 
-INSERT INTO employees VALUES
+SELECT * FROM Departments
+ORDER BY department_id;
+
+
+-- Query 3 - Insert Employees
+
+INSERT INTO Employees
+(
+    employee_id,
+    first_name,
+    last_name,
+    email,
+    department_id,
+    city,
+    salary,
+    join_date,
+    experience_years,
+    performance_rating
+)
+VALUES
 (101,'Gireesh','LB','gireesh@company.com',4,'Mysuru',45000,'2024-01-15',1,4.1),
 (102,'Ravi','Kumar','ravi@company.com',3,'Bangalore',55000,'2023-06-10',2,4.3),
 (103,'Anu','Sharma','anu@company.com',2,'Mysuru',65000,'2022-03-05',4,4.8),
@@ -30,19 +51,22 @@ INSERT INTO employees VALUES
 (115,'Naveen','Gowda','naveen@company.com',5,'Mysuru',55000,'2023-04-22',2,4.1);
 
 
--- Query 3: Verify departments
+-- Query 4 - Verify Employees
 
-SELECT * FROM departments;
-
-
--- Query 4: Verify employees
-
-SELECT * FROM employees;
+SELECT * FROM Employees
+ORDER BY employee_id;
 
 
--- Query 5: Insert projects
+-- Query 5 - Insert Projects
 
-INSERT INTO projects VALUES
+INSERT INTO Projects
+(
+    project_id,
+    project_name,
+    employee_id,
+    budget
+)
+VALUES
 (201,'ERP Upgrade',101,500000),
 (202,'Customer Portal',102,300000),
 (203,'Fraud Detection System',103,800000),
@@ -55,81 +79,107 @@ INSERT INTO projects VALUES
 (210,'Data Warehouse',110,1500000);
 
 
--- Query 6: Verify projects
+-- Query 6 - Verify Projects
 
-SELECT * FROM projects;
-
--- Query 7: Insert customers
-
-INSERT INTO customers VALUES
-(301,'ABC Retail','Bangalore'),
-(302,'XYZ Industries','Mysuru'),
-(303,'Tech Solutions','Hyderabad'),
-(304,'Smart Traders','Pune'),
-(305,'Global Enterprises','Chennai'),
-(306,'Prime Logistics','Mumbai'),
-(307,'Future Systems','Delhi'),
-(308,'NextGen Retail','Bangalore'),
-(309,'City Mart','Mysuru'),
-(310,'Universal Corp','Hyderabad'),
-(311,'Elite Stores','Pune'),
-(312,'Modern Traders','Chennai'),
-(313,'Bright Electronics','Mumbai'),
-(314,'National Suppliers','Delhi'),
-(315,'Digital World','Bangalore');
+SELECT * FROM Projects
+ORDER BY project_id;
 
 
--- Query 8: Verify customers
+-- Query 7 - Insert Customers
 
-SELECT * FROM customers;
-
--- Query 9: Insert orders
-
-INSERT INTO orders VALUES
-(401,301,25000,'2025-01-10'),
-(402,302,18000,'2025-01-15'),
-(403,303,42000,'2025-01-20'),
-(404,304,15000,'2025-01-25'),
-(405,305,50000,'2025-02-01'),
-(406,306,22000,'2025-02-05'),
-(407,307,31000,'2025-02-10'),
-(408,308,27000,'2025-02-15'),
-(409,309,12000,'2025-02-20'),
-(410,310,45000,'2025-02-25'),
-(411,311,38000,'2025-03-01'),
-(412,312,29000,'2025-03-05'),
-(413,313,55000,'2025-03-10'),
-(414,314,17000,'2025-03-15'),
-(415,315,62000,'2025-03-20'),
-(416,301,33000,'2025-03-25'),
-(417,302,21000,'2025-04-01'),
-(418,303,47000,'2025-04-05'),
-(419,304,19000,'2025-04-10'),
-(420,305,52000,'2025-04-15'),
-(421,306,28000,'2025-04-20'),
-(422,307,35000,'2025-04-25'),
-(423,308,24000,'2025-05-01'),
-(424,309,14000,'2025-05-05'),
-(425,310,48000,'2025-05-10'),
-(426,311,39000,'2025-05-15'),
-(427,312,26000,'2025-05-20'),
-(428,313,58000,'2025-05-25'),
-(429,314,20000,'2025-05-28'),
-(430,315,65000,'2025-05-30');
+INSERT INTO Customers
+(
+    customer_id,
+    customer_name,
+    city,
+    customer_type
+)
+VALUES
+(301,'ABC Retail','Bangalore','Retail'),
+(302,'XYZ Industries','Mysuru','Enterprise'),
+(303,'Tech Solutions','Hyderabad','Enterprise'),
+(304,'Smart Traders','Pune','Wholesale'),
+(305,'Global Enterprises','Chennai','Enterprise'),
+(306,'Prime Logistics','Mumbai','Logistics'),
+(307,'Future Systems','Delhi','Enterprise'),
+(308,'NextGen Retail','Bangalore','Retail'),
+(309,'City Mart','Mysuru','Retail'),
+(310,'Universal Corp','Hyderabad','Enterprise'),
+(311,'Elite Stores','Pune','Wholesale'),
+(312,'Modern Traders','Chennai','Wholesale'),
+(313,'Bright Electronics','Mumbai','Retail'),
+(314,'National Suppliers','Delhi','Wholesale'),
+(315,'Digital World','Bangalore','Retail');
 
 
--- Query 10: Verify orders
+-- Query 8 - Verify Customers
 
-SELECT * FROM orders;
+SELECT * FROM Customers
+ORDER BY customer_id;
 
+
+-- Query 9 - Insert Orders
+
+INSERT INTO Orders
+(
+    order_id,
+    customer_id,
+    order_amount,
+    order_date,
+    order_status
+)
+VALUES
+(401,301,25000,'2025-01-10','Completed'),
+(402,302,18000,'2025-01-15','Completed'),
+(403,303,42000,'2025-01-20','Pending'),
+(404,304,15000,'2025-01-25','Completed'),
+(405,305,50000,'2025-02-01','Cancelled'),
+(406,306,22000,'2025-02-05','Completed'),
+(407,307,31000,'2025-02-10','Completed'),
+(408,308,27000,'2025-02-15','Pending'),
+(409,309,12000,'2025-02-20','Completed'),
+(410,310,45000,'2025-02-25','Completed'),
+(411,311,38000,'2025-03-01','Returned'),
+(412,312,29000,'2025-03-05','Completed'),
+(413,313,55000,'2025-03-10','Completed'),
+(414,314,17000,'2025-03-15','Cancelled'),
+(415,315,62000,'2025-03-20','Completed'),
+(416,301,33000,'2025-03-25','Completed'),
+(417,302,21000,'2025-04-01','Pending'),
+(418,303,47000,'2025-04-05','Completed'),
+(419,304,19000,'2025-04-10','Completed'),
+(420,305,52000,'2025-04-15','Completed'),
+(421,306,28000,'2025-04-20','Returned'),
+(422,307,35000,'2025-04-25','Completed'),
+(423,308,24000,'2025-05-01','Completed'),
+(424,309,14000,'2025-05-05','Pending'),
+(425,310,48000,'2025-05-10','Completed'),
+(426,311,39000,'2025-05-15','Completed'),
+(427,312,26000,'2025-05-20','Cancelled'),
+(428,313,58000,'2025-05-25','Completed'),
+(429,314,20000,'2025-05-28','Completed'),
+(430,315,65000,'2025-05-30','Completed');
+
+
+-- Query 10 - Verify Orders
+
+SELECT * FROM Orders
+ORDER BY order_id;
+
+
+-- ============================================
 -- Verification Counts
+-- ============================================
 
-SELECT COUNT(*) FROM departments;
+SELECT COUNT(*) AS total_departments FROM Departments;
 
-SELECT COUNT(*) FROM employees;
+SELECT COUNT(*) AS total_employees FROM Employees;
 
-SELECT COUNT(*) FROM projects;
+SELECT COUNT(*) AS total_projects FROM Projects;
 
-SELECT COUNT(*) FROM customers;
+SELECT COUNT(*) AS total_customers FROM Customers;
 
-SELECT COUNT(*) FROM orders;
+SELECT COUNT(*) AS total_orders FROM Orders;
+
+
+-- CompanyDB v1.0 Setup Completed Successfully
