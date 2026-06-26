@@ -41,3 +41,8 @@ length = 10
 width = 5
 perimeter = 2 * (length + width)
 print("Perimeter =", perimeter)
+
+# Program 7 - print my name and age
+name = "gireesh"
+age = 28
+print(f" My name is {name} and I am {age} years old.")
