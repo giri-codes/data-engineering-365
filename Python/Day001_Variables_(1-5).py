@@ -1,48 +1,43 @@
-# Day 01 - Variables
+# Python Foundations
+# Topic - Variables
+
+# Program 1 - Store Your Name
+name = "Gireesh"
+print(name)
 
 
-# Program 1 - Swap two variables
-a = 10
-b = 20
-a, b = b, a
-print("a =", a)
-print("b =", b)
+# Program 2 - Store Age and City
+age = 28
+city = "Mysuru"
+print(age)
+print(city)
 
 
-# Program 2 - Mutiple variable assignment
-name, age, city = "Gireesh", 28, "Mysuru"
+# Program 3 - Create Multiple Variables
+name = "Gireesh"
+age = 28
+city = "Mysuru"
 print(name)
 print(age)
 print(city)
 
 
-# Program 3 - Check variable type
+# Program 4 - Reassign Variable Value
+salary = 45000
+print("Old Salary:", salary)
 salary = 50000
-print(type(salary))  
+print("New Salary:", salary)
 
 
-# Program 4 - Calculate area of a rectangle
-length = 10
-width = 5
-area = length * width
-print("Area =",area)
+# Program 5 - Swap Two Variables
+a = 10
+b = 20
+print("Before Swap")
+print("a =", a)
+print("b =", b)
 
+a, b = b, a
 
-# Program 5 - Calculate simple interest
-principal = 1000
-rate = 5
-time = 2
-simple_interest = (principal * rate * time) / 100
-print("Simple Interest =", simple_interest)
-
-
-# Program 6 - Calculate the perimeter of a rectangle
-length = 10
-width = 5
-perimeter = 2 * (length + width)
-print("Perimeter =", perimeter)
-
-# Program 7 - print my name and age
-name = "gireesh"
-age = 28
-print(f" My name is {name} and I am {age} years old.")
+print("After Swap")
+print("a =", a)
+print("b =", b)
