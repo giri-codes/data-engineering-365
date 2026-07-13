@@ -1,5 +1,7 @@
 # Python Foundations
 # Topic - Variables
+# Day 001 - Variables(1-5)
+
 
 # Program 1 - Store Your Name
 name = "Gireesh"
@@ -17,12 +19,13 @@ print(city)
 name = "Gireesh"
 age = 28
 city = "Mysuru"
+
 print(name)
 print(age)
 print(city)
 
 
-# Program 4 - Reassign Variable Value
+# Program 4 - Reassign Variable
 salary = 45000
 print("Old Salary:", salary)
 salary = 50000
