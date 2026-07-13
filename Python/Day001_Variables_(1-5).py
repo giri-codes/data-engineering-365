@@ -5,42 +5,43 @@
 
 # Program 1 - Store Your Name
 name = "Gireesh"
-print(name)
+print("Name:",name)
 
 
 # Program 2 - Store Age and City
 age = 28
 city = "Mysuru"
-print(age)
-print(city)
+print("Age:",age)
+print("City:",city)
 
 
 # Program 3 - Create Multiple Variables
 name = "Gireesh"
 age = 28
 city = "Mysuru"
+salary = 250000
 
-print(name)
-print(age)
-print(city)
-
+print("Name:",name)
+print("Age:",age)
+print("City:",city)
+print("Salary:",salary)
 
 # Program 4 - Reassign Variable
-salary = 45000
+salary = 100000
 print("Old Salary:", salary)
-salary = 50000
-print("New Salary:", salary)
+salary = 250000
+print("New Updated Salary:", salary)
 
 
 # Program 5 - Swap Two Variables
-a = 10
-b = 20
+first_number = 10
+second_number = 20
 print("Before Swap")
-print("a =", a)
-print("b =", b)
+print("first_number =", first_number)
+print("second_number =", second_number)
 
-a, b = b, a
+first_number, second_number = second_number, first_number
 
 print("After Swap")
-print("a =", a)
-print("b =", b)
+print("first_number =", first_number)
+print("second_number =", second_number)
