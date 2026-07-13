@@ -1,33 +1,34 @@
 # Day 02 - Variables (6-10)
 
-
-# Program 6 - Salary increment calculator
-salary = 50000
-increment_percentage = 10
-new_salary = salary + (salary * increment_percentage / 100)
-print("New Salary =", new_salary) 
+# Program 6 - Store employees salary
+salary = 45000
+print("Employees salary:", salary)
 
 
-# Program 7 - Temperature conversion (Celsius to Fahrenheit)
-celsius = 30
-fahrenheit = (celsius * 9/5) + 32
-print("Fahrenheit =", fahrenheit)
+# Program 7 -Store customer count
+customer_count = 315
+print("Customer count :", customer_count)
 
 
-# Program 8 - Students marks average calculator
-maths = 80
-science = 75
-english = 90
-average_marks = (maths + science + english) / 3
-print("Average Marks =", average_marks)
+# Program 8 - Store monthly revenue
+monthly_revenue = 2500000
+print("Monthly_revenue :", monthly_revenue)
 
 
-# Program 9 - User input storage
-name = input("Enter your name: ")
-print("Welcome", name)
+# Program 9 - Store ETL batch size
+etl_batch_size = 1000
+print("ETL Batch Size :", etl_batch_size)
 
 
-# Program 10 - Age after 5 years
-age = 28
-future_age = age + 5
-print("Age after 5 years =", future_age)
+# Program 10 - Mini Business Scenario - Store employee information using variables and display all details.
+employee_name = "Gireesh"
+employee_id = 101
+department = "IT"
+salary = 250000
+city = "Mysuru"
+
+print("Employee name :", employee_name)
+print("Employee ID   :", employee_id)
+print("Department    :", department)
+print("Salary        :", salary)
+print("City          :", city)
