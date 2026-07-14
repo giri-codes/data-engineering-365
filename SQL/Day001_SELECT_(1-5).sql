@@ -1,5 +1,5 @@
 -- SQL Foundations
--- SELECT(1-5)
+-- Day001 - SELECT(1-5)
 
 -- Query 1: Display all columns and all records from the Employees table
 SELECT *
