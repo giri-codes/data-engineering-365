@@ -1,4 +1,4 @@
--- Day004 - SELECT (6-10)
+-- Day002 - SELECT(6-10)
 
 USE companydb;
 
